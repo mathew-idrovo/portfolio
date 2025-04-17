@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import Image from 'next/image'
-import { AnimatedText } from './Animated/AnimatedText'
+import { AnimatedText } from '../Animated/AnimatedText'
 
 export const Hero = () => {
   const y = 0 // Example initialization

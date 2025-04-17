@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export const AboutMeSection = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-background">
+    <section id="about" className="py-24 md:py-32 bg-[var(--background)]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.div
@@ -46,12 +46,12 @@ export const AboutMeSection = () => {
             transition={{ duration: 0.5 }}
             className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-md"
           >
-            <Image
+            {/* <Image
               src="/images/profile-photo.jpg"
               alt="Mateo Idrovo"
               fill
               className="object-cover object-center"
-            />
+            /> */}
             <div className="absolute inset-0 bg-cyan-600/20 backdrop-blur-[2px]" />
           </motion.div>
 
