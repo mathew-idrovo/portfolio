@@ -17,7 +17,7 @@ export const AboutMeSection = () => {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-white">
               Sobre <span className="text-cyan-600">Mí</span>
             </h2>
           </motion.div>
@@ -28,7 +28,7 @@ export const AboutMeSection = () => {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <p className="text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-muted-foreground mb-8 leading-relaxed text-[#6b6b71]">
               Frontend Developer con experiencia en React y Next.js,
               especializado en la creación de interfaces dinámicas, responsivas
               y optimizadas. Cuento con conocimientos en TypeScript, Docker y
@@ -44,15 +44,15 @@ export const AboutMeSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5 }}
-            className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-md"
+            className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-xl"
           >
-            {/* <Image
-              src="/images/profile-photo.jpg"
+            <Image
+              src="/images/profile.jpg"
               alt="Mateo Idrovo"
               fill
               className="object-cover object-center"
-            /> */}
-            <div className="absolute inset-0 bg-cyan-600/20 backdrop-blur-[2px]" />
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/40 to-cyan-500/10 backdrop-blur-[1px]" />
           </motion.div>
 
           <div>
@@ -62,13 +62,13 @@ export const AboutMeSection = () => {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl font-bold mb-6">Mi Enfoque</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-6 text-white">Mi Enfoque</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed text-[#6b6b71]">
                 Me enfoco en arquitecturas frontend eficientes, integración de
                 APIs y optimización del rendimiento, priorizando la innovación,
                 el aprendizaje continuo y las buenas prácticas de desarrollo.
               </p>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-muted-foreground mb-8 leading-relaxed text-[#6b6b71]">
                 Desarrollo interfaces interactivas con React, Next.js, WordPress
                 y Joomla, enfocándome en la usabilidad, accesibilidad y
                 rendimiento. Optimizo la experiencia de usuario mediante buenas
@@ -82,7 +82,7 @@ export const AboutMeSection = () => {
                 <h4 className="text-3xl font-bold text-cyan-600 mb-2">
                   <AnimatedCounter from={0} to={2} duration={2} />+
                 </h4>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground text-[#6b6b71]">
                   Años de Experiencia
                 </p>
               </div>
@@ -90,7 +90,7 @@ export const AboutMeSection = () => {
                 <h4 className="text-3xl font-bold text-cyan-600 mb-2">
                   <AnimatedCounter from={0} to={15} duration={2} />+
                 </h4>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground text-[#6b6b71]">
                   Proyectos Completados
                 </p>
               </div>
@@ -98,7 +98,7 @@ export const AboutMeSection = () => {
                 <h4 className="text-3xl font-bold text-cyan-600 mb-2">
                   <AnimatedCounter from={0} to={10} duration={2} />+
                 </h4>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground text-[#6b6b71]">
                   Clientes Satisfechos
                 </p>
               </div>
@@ -106,11 +106,13 @@ export const AboutMeSection = () => {
                 <h4 className="text-3xl font-bold text-cyan-600 mb-2">
                   <AnimatedCounter from={0} to={8} duration={2} />+
                 </h4>
-                <p className="text-sm text-muted-foreground">Certificaciones</p>
+                <p className="text-sm text-muted-foreground text-[#6b6b71]">
+                  Certificaciones
+                </p>
               </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 text-white">
               <motion.div
                 whileHover={{ y: -5 }}
                 transition={{ type: 'spring', stiffness: 400 }}
@@ -122,7 +124,7 @@ export const AboutMeSection = () => {
                     rel="noopener noreferrer"
                     aria-label="GitHub"
                   >
-                    <Github className="h-5 w-5" />
+                    <Github className="h-5 w-5 " />
                   </Link>
                 </Button>
               </motion.div>
