@@ -37,22 +37,18 @@ export const ExperienceWork = () => {
           <ExperienceTimeline />
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center borde">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5 }}
           >
-            <Button asChild variant="outline" className="group">
-              <Link
-                href="/resume.pdf"
-                target="_blank"
-                className="flex items-center"
-              >
-                Descargar CV Completo
-                <Download className="ml-2 h-4 w-4" />
-              </Link>
+            <Button asChild variant="outline" className="group border-0">
+              <div className="inline-flex items-center text-white">
+                <p>Descargar CV Completo</p>
+                <Download className="ml-2 h-4 w-4 text-white" />
+              </div>
             </Button>
           </motion.div>
         </div>
