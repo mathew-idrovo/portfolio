@@ -2,7 +2,7 @@
 import { motion } from 'motion/react'
 import { ExperienceTimeline } from '../ui/Experience-timeline'
 import { Button } from '@/components/ui/button'
-import { Download, Link } from 'lucide-react'
+import { Download } from 'lucide-react'
 
 export const ExperienceWork = () => {
   return (

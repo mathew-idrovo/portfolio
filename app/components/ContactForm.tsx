@@ -1,11 +1,11 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useState } from 'react'
+
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { motion } from 'motion/react'
-import { toast } from 'sonner'
+
 import {
   Form,
   FormControl,
@@ -30,7 +30,7 @@ const formSchema = z.object({
 })
 
 export function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  //   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -42,34 +42,34 @@ export function ContactForm() {
     },
   })
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true)
+  //   async function onSubmit(values: z.infer<typeof formSchema>) {
+  //     setIsSubmitting(true)
 
-    try {
-      // In a real app, you would send the data to your API here
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+  //     try {
+  //       // In a real app, you would send the data to your API here
+  //       await new Promise((resolve) => setTimeout(resolve, 1500))
 
-      //   toast({
-      //     title: 'Message sent!',
-      //     description: "Thank you for your message. I'll get back to you soon.",
-      //   })
+  //       //   toast({
+  //       //     title: 'Message sent!',
+  //       //     description: "Thank you for your message. I'll get back to you soon.",
+  //       //   })
 
-      form.reset()
-    } catch (error) {
-      //   toast({
-      //     title: 'Error',
-      //     description:
-      //       'There was a problem sending your message. Please try again.',
-      //     variant: 'destructive',
-      //   })
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+  //       form.reset()
+  //     } catch (error) {
+  //       //   toast({
+  //       //     title: 'Error',
+  //       //     description:
+  //       //       'There was a problem sending your message. Please try again.',
+  //       //     variant: 'destructive',
+  //       //   })
+  //     } finally {
+  //       setIsSubmitting(false)
+  //     }
+  //   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form className="space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <FormField
             control={form.control}
@@ -155,10 +155,10 @@ export function ContactForm() {
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
           <Button
             type="submit"
-            disabled={isSubmitting}
+            // disabled={isSubmitting}
             className="w-full  bg-[#399dbc]"
           >
-            {isSubmitting ? (
+            {/* {isSubmitting ? (
               <span className="flex items-center">
                 <svg
                   className="animate-spin -ml-1 mr-2 h-4 w-4"
@@ -184,7 +184,7 @@ export function ContactForm() {
               </span>
             ) : (
               'Send Message'
-            )}
+            )} */}
           </Button>
         </motion.div>
       </form>

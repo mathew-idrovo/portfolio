@@ -8,7 +8,7 @@ import {
   Linkedin,
   Mail,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'motion/react'
+import { motion } from 'motion/react'
 import { ContactForm } from '../ContactForm'
 
 export const Contact = () => {
