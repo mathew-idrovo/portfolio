@@ -76,13 +76,17 @@ export function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel className="text-white">Name</FormLabel>
                 <FormControl>
                   <motion.div
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.99 }}
                   >
-                    <Input placeholder="Your name" {...field} />
+                    <Input
+                      placeholder="Your name"
+                      {...field}
+                      className="border-bg-[#399dbc]"
+                    />
                   </motion.div>
                 </FormControl>
                 <FormMessage />
@@ -95,7 +99,7 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="text-white">Email</FormLabel>
                 <FormControl>
                   <motion.div
                     whileHover={{ scale: 1.01 }}
@@ -115,7 +119,7 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel className="text-white">Subject</FormLabel>
               <FormControl>
                 <motion.div
                   whileHover={{ scale: 1.01 }}
@@ -134,7 +138,7 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel className="text-white">Message</FormLabel>
               <FormControl>
                 <motion.div
                   whileHover={{ scale: 1.01 }}
@@ -149,7 +153,11 @@ export function ContactForm() {
         />
 
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-          <Button type="submit" disabled={isSubmitting} className="w-full">
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full  bg-[#399dbc]"
+          >
             {isSubmitting ? (
               <span className="flex items-center">
                 <svg
